@@ -33,9 +33,9 @@ engines:
     silence_stderr: false                 # Suppresses stderr output.
     move_overhead_multiplier: 5.0         # Increase if your bot flags games too often. Default move overhead is 1 second per 1 minute initital time.
     uci_options:                          # Arbitrary UCI options passed to the engine.
-      Threads: 8                          # Maximum Threadripper power for longer games.
-      Hash: 8192                           # Massive hash for deep calculation.
-      Move Overhead: 250                  # Increase if your bot flags games too often.
+      Threads: 10                          # Maximum Threadripper power for longer games.
+      Hash: 400                           # Massive hash for deep calculation.
+      Move Overhead: 900                  # Increase if your bot flags games too often.
     limits:    
   #    depth: 35                           # Deep search for standard games.
   #    nodes: 8000000                      # High node count for thorough analysis.
@@ -116,13 +116,13 @@ opening_books:
         - probook
     bullet_white:                            # Other bullet games (1+0)
       selection: weighted_random
-      max_depth: 20                    # Limit book depth so engine evaluates positions
+      max_depth: 15                    # Limit book depth so engine evaluates positions
       names:
         - small
         - probook
     bullet_black:                            # Aggressive black bullet setup
       selection: best_move                # Always play strongest moves as black
-      max_depth: 15                    # Deeper book usage for black preparation
+      max_depth: 88                    # Deeper book usage for black preparation
       names:
         - small
         - probook
