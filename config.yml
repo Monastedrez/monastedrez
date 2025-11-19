@@ -9,8 +9,8 @@ engines:
     move_overhead_multiplier: 22.5        # Optimized for bullet games.
     uci_options:                          # Arbitrary UCI options passed to the engine.
       Threads: 4                          # Increased threads for Threadripper power.
-      Hash: 4096                           # Increased hash for better position evaluation.
-      Move Overhead: 100                  # Reduced for faster bullet moves.
+      Hash: 4086                           # Increased hash for better position evaluation.
+      Move Overhead: 110                  # Reduced for faster bullet moves.
     limits:                               # Limits that end the move calculation early.
    #   depth: 28                          # Maximum search depth for bullet.
 
@@ -21,9 +21,9 @@ engines:
     silence_stderr: false                 # Suppresses stderr output.
     move_overhead_multiplier: 20.0         # Increase if your bot flags games too often. Default move overhead is 1 second per 1 minute initital time.
     uci_options:                          # Arbitrary UCI options passed to the engine.
-      Threads: 8                          # Max CPU threads the engine can use.
-      Hash: 4096                           # Max memory (in megabytes) the engine can allocate.
-      Move Overhead: 100                  # Increase if your bot flags games too often.
+      Threads: 10                          # Max CPU threads the engine can use.
+      Hash: 5007                           # Max memory (in megabytes) the engine can allocate.
+      Move Overhead: 102                  # Increase if your bot flags games too often.
     limits:
     
   standard:                               # Engine used for standard chess and when no suitable special engine is configured.
@@ -34,8 +34,8 @@ engines:
     move_overhead_multiplier: 5.0         # Increase if your bot flags games too often. Default move overhead is 1 second per 1 minute initital time.
     uci_options:                          # Arbitrary UCI options passed to the engine.
       Threads: 10                          # Maximum Threadripper power for longer games.
-      Hash: 400                           # Massive hash for deep calculation.
-      Move Overhead: 900                  # Increase if your bot flags games too often.
+      Hash: 3000                           # Massive hash for deep calculation.
+      Move Overhead: 500                  # Increase if your bot flags games too often.
     limits:    
   #    depth: 35                           # Deep search for standard games.
   #    nodes: 8000000                      # High node count for thorough analysis.
